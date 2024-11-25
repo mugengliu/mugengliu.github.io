@@ -1,15 +1,18 @@
 project:
   type: website
+  output-dir: docs  # GitHub Pages often uses 'docs' as the output folder
 
 website:
   title: "mugengliu.github.io"
   navbar:
     right:
-      - about.qmd
+      - text: About
+        href: about.qmd
       - icon: github
         href: https://github.com/
       - icon: twitter
         href: https://twitter.com
+
 format:
   html:
     theme: pulse
@@ -18,5 +21,6 @@ format:
 editor: visual
 
 execute: 
-  freeze: auto 
+  freeze: auto
+
 
