@@ -1,5 +1,5 @@
 ---
-title: "mugengliu.github.io"
+title: "what is your name"
 listing:
   contents: posts
   sort: "date desc"
@@ -9,4 +9,25 @@ listing:
   filter-ui: false
 page-layout: full
 title-block-banner: true
+---
+
+# Welcome to My Blog
+
+<h3>
+  Enjoy my favorite music for today:
+</h3>
+
+<div id="videotag">
+  <video controls muted autoplay loop>
+    <source src="media/就是爱你.mp4" type="video/mp4">
+    Your browser does not support the video element.
+  </video>
+</div>
+
+<div>
+  <audio controls>
+    <source src="media/陶喆.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+<div>
 ---

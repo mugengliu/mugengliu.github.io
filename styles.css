@@ -1,1 +1,17 @@
 /* css styles */
+h3 {
+  color: purple;
+}
+
+#videotag {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+#videotag>video {
+  width: 100%;
+  height: 100%;
+}
