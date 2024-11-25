@@ -3,7 +3,7 @@ project:
   output-dir: docs  # GitHub Pages often uses 'docs' as the output folder
 
 website:
-  title: "mugengliu.github.io"
+  title: "Have a Good Day"
   navbar:
     right:
       - text: About

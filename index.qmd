@@ -18,16 +18,41 @@ title-block-banner: true
 </h3>
 
 <div id="videotag">
-  <video controls muted autoplay loop>
+  <video muted autoplay loop>
     <source src="media/就是爱你.mp4" type="video/mp4">
     Your browser does not support the video element.
   </video>
 </div>
 
-<div>
-  <audio controls>
+<div class="input-overlay">
+  <input type="range" min="0" max="100" value="50" id="myRange" class="progressbar">
+  <audio controls id="audioPlayer">
     <source src="media/陶喆.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 </div>
+
+<script>
+// Get the range input and audio elements
+const rangeInput = document.getElementById('myRange');
+const audioPlayer = document.getElementById('audioPlayer');
+
+// Update the range input to match the current playback time
+audioPlayer.addEventListener('timeupdate', function() {
+  const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+  rangeInput.value = progress; // Update the progress bar as the audio plays
+});
+
+// Add event listener to play audio when the range input is clicked or changed
+rangeInput.addEventListener('input', function() {
+  if (audioPlayer.paused) {
+    audioPlayer.play(); // Play the audio if it's paused
+  }
+
+  // Calculate the current time based on the range input value
+  const newTime = (rangeInput.value / 100) * audioPlayer.duration;
+  audioPlayer.currentTime = newTime; // Seek to the new time in the audio
+});
+</script>
+
 ---
